@@ -1,0 +1,101 @@
+.header {
+    width: 40%;
+    background-image: url('/static/assets/background3.png'), url('/static/assets/background8.svg');
+    background-position-x: 15%, 90%;
+    background-position-y: 60%, 90%;
+    background-size: 25%, 25%;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+hr {
+    height: 1px;
+    width: 40%;
+    background-color: brown;
+    border-color: brown;
+    margin-top: 0px;
+    
+}
+
+.dr h1{
+    text-align: center;
+    margin-bottom: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-width: 0px;
+    width: 100%;
+    height: 70px;
+    
+}
+
+.data h2{
+    text-align: center;
+    margin-bottom: 1px;
+    margin-left: auto;
+    margin-top: 1px;
+    margin-right: auto;
+    border: solid;
+    border-width: 0px;
+    width: 100%;
+}
+
+.researcher h3{
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-width: 0px;
+    width: 100%;
+}
+
+.content {
+    background: linear-gradient(to right, #FFE4B5, #EEE8AA, #FFFACD);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    margin: 0.3em auto;
+    background: #f0f0f0;
+}
+
+select[id="title"] {
+    background: #f0f0f0;
+}
+
+select {
+    display: block;
+    background: #f0f0f0;
+}
+
+label[class="inline"] {
+    display: block;
+}
+
+textarea {
+    margin: 10px 0 0 -0.2em;
+    width: 100%;
+    min-height: 2em;
+    background: #f0f0f0;
+}
+
+input[type=submit] {
+    display: block;
+    margin: 1em auto;
+    width: 60%;
+}

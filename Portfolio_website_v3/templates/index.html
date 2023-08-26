@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">>
+        <title>John Doe, Data Scientist</title>
+    </head>
+    <body>
+        <div class="main">
+            <main>
+                <div class="header">
+                    <div class="dr"><h1>Dr John Doe, PhD</h1></div>
+                    <hr>
+                    <div class="data"><h2>Data Scientist</h2></div>
+                    <div class="researcher"><h3>Researcher</h3></div>
+                </div>
+                <div class="content">
+                    <div>
+                        <section id="about">
+                            <h2>About me</h2>
+                            <p>Hi, I'm John Doe, a data scientist with a relentless passion for uncovering insights through data. With a background in mathematics and computer science, I've dedicated my career to transforming raw data into actionable knowledge.</p>
+                            <p>From machine learning to statistical modeling, I love exploring new techniques and tools to solve real-world problems. When I'm not analyzing data sets or building predictive models, you can find me reading the latest research papers or experimenting with new algorithms.</p>
+                            <p>My mission is to make data accessible and insightful, whether it's for a small startup or a Fortune 500 company. Let's turn data into decisions together!</p>
+                        </section>
+                    </div>
+                    <div>
+                        <section class="skills">
+                            <h2>Skills</h2>
+                            <p>I believe in continuous learning and have honed my skills in the following areas:</p>
+                            <ul>
+                                <li>Programming Languages: Python, R, SQL</li>
+                                <li>Data Analysis: Pandas, NumPy, SciPy</li>
+                                <li>Machine Learning: Scikit-Learn, TensorFlow, Keras</li>
+                                <li>Data Visualization: Matplotlib, Seaborn, Tableau</li>
+                                <li>Big Data Technologies: Hadoop, Spark</li>
+                                <li>Statistical Modeling: Regression, Classification, Clustering</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <section>
+                        <h2>Register for my courses</h2>
+                        <p>Registrations are open three times per year</p>
+                        <form method="POST" action="/register" onsubmit="return checkPassword()">
+                            <fieldset>
+                                <label>
+                                    <p>Title</p>
+                                    <select id="title" name="title">
+                                        <option value="mr">Mr</option>
+                                        <option value="ms">Ms</option>
+                                    </select>
+                                </label>
+                                <label>Enter your first name: <input id="first_name" name="first_name" type="text" required /></label>
+                                <label>Enter your last name: <input id="last_name" name="last_name" type="text" required /></label>
+                                <label>Enter your email: <input id="email" name="email" type="email" required /></label>
+                                <label>Create a new password: <input id="password1" name="password1" type="password" pattern="[a-z0-5]{8,}" required /></label>
+                                <label>Confirm your password: <input id="password2" name="password2" type="password" required /></label>
+                            </fieldset>
+                            <fieldset>
+                                <p>Which of my courses would you like to register for?</p>
+                                <select id="course" name="course">
+                                    <option value="choose">Choose a course</option>
+                                    <option value="ai101">Artificial intelligence 101</option>
+                                    <option value="ml">Machine Learning</option>
+                                    <option value="ai102">Artificial intelligence 102</option>
+                                    <option value="aifvg">AI for videographers</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <p>Where did you hear about my work?</p>
+                                <label class="inline"><input id="twitter" name="referrer" value="twitter" type="radio" /> Twitter </label>
+                                <label class="inline"><input id="youtube" name="referrer" value="youtube" type="radio" class="inline" /> Youtube </label>
+                                <label class="inline"><input id="tiktok" name="referrer" value="tiktok" type="radio" class="inline" /> Tik-Tok </label>
+                                <label class="inline"><input id="friend" name="referrer" value="friend" type="radio" class="inline" /> Friend </label>
+                            </fieldset>
+                            <fieldset>
+                                <p>What is your previous experience with AI?</p>
+                                <textarea id="experience" name="experience" rows ="10" cols="20"></textarea>
+                            </fieldset>
+                            <input type="submit" value="Submit"/>
+                        </form>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <script>
+            function checkPassword() {
+                var password1= document.getElementById("password1").value;
+                var password2 = document.getElementById("password2").value;
+                if (password1 != password2) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
